@@ -24,6 +24,7 @@ public class AddStudentActivity extends AppCompatActivity {
 
     private SQLiteHelper sqLiteHelper = new SQLiteHelper(this);
     private StudentModel studentModel;
+    private String studentJson = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,12 +71,12 @@ public class AddStudentActivity extends AppCompatActivity {
 
     public void getData() {
         Intent intent = this.getIntent();
-        String student = intent.getStringExtra("student");
-        if(!student.isEmpty()) {
+        studentJson = intent.getStringExtra("student");
+        if(studentJson != null) {
             isEdit = true;
             btnAdd.setText("Update");
             Gson gson = new Gson();
-            studentModel = gson.fromJson(student, StudentModel.class);
+            studentModel = gson.fromJson(studentJson, StudentModel.class);
             edtName.setText(studentModel.getName());
             edtBirthday.setText(studentModel.getBirthday());
             edtAddress.setText(studentModel.getAddress());

@@ -3,9 +3,11 @@
     android:id="@+id/item_student"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:background="@drawable/border_recycler"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
 
     <ImageView
         android:id="@+id/imgAvatar"
@@ -54,10 +56,6 @@
         android:layout_below="@+id/tvAddress"
         android:layout_alignStart="@+id/tvAddress" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:background="#000"
-        android:layout_height="1px"/>
 
 
 </RelativeLayout>
