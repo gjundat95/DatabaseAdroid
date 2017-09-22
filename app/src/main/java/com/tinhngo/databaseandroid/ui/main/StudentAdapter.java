@@ -51,7 +51,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentH
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailStudentActivity.class);
                 intent.putExtra("id", student.getId());
-                context.startActivityForResult(intent, 1);
+                context.startActivityForResult(intent, MainActivity.MainActivity_Id);
             }
         });
     }

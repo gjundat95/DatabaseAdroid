@@ -19,8 +19,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int MainActivity_Id = 1;
-    private static final int AddStudent_Id = 2;
+    public static final int MainActivity_Id = 1;
+    public static final int AddStudent_Id = 2;
 
     private List<StudentModel> studentModels = new ArrayList<>();
     private SQLiteHelper sqLiteHelper = new SQLiteHelper(this);
